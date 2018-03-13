@@ -1,0 +1,45 @@
+{
+  "name": "v2xer",
+  "version": "0.1",
+  "description": "V2EX 使用助手",
+
+  "icons": {
+    "16": "imgs/icons/favorite_16.png",
+    "48": "imgs/icons/favorite_48.png",
+    "128": "imgs/icons/favorite_128.png"
+  },
+
+  "browser_action": {
+    "default_title": "v2xer",
+    "default_icon": "imgs/icons/favorite_16.png",
+    "default_popup": "views/browser_action/index.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.v2ex.com/*"],
+      "js": ["libs/jquery/jquery-2.2.4.min.js", "views/content_scripts/index.js"]
+    }
+  ],
+
+  "background": {
+    "persistent": true,
+    "page": "views/background/index.html"
+  },
+
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "web_accessible_resources": [
+    "imgs/*",
+    "libs/*"
+  ],
+
+  "minimum_chrome_version": "40",
+  "manifest_version": 2
+}
