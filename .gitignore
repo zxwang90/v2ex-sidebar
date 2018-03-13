@@ -28,5 +28,5 @@ dependency-reduced-pom.xml
 .classpath
 
 # chrome-plugin
-install/v2xer
-install/v2xer.crx
+install/v2ex-sidebar
+install/v2ex-sidebar.crx
